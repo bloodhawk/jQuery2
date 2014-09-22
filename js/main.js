@@ -193,7 +193,7 @@ $(document).ready(function () {
             var t;
             $taskAdd.show();
             $taskShow.hide();
-            t = daydiff(date, parseDate($calDate.val()));
+            t = Math.ceil(daydiff(date, parseDate($calDate.val())));
             taskArr.push({
                 task: $taskName.val(),
                 date: t
