@@ -111,7 +111,7 @@ $(document).ready(function () {
         //------------------------------
 
         var renderTodayDate = function () {
-            $todayHeader.text('Tasks today(' + monthDate +': ' + todayDate + '): ');
+            $todayHeader.text('Tasks today (' + monthDate +' ' + todayDate + '): ');
         };
 
         var renderNew = function () {
