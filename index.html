@@ -1,12 +1,93 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Listo</title>
-</head>
-<body>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>To do list</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/font-awesome.css">
+        <link href="css/ui-lightness/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://www.parsecdn.com/js/parse-1.3.0.min.js"></script>
+    </head>
+    
+    <body>
+        <div class="body">
+            <div class="s-menu">
+                <div class="s-header">
+                    <div class="top-smenu-logo">	<i class="fa fa-list-ol"></i>
+ToDo!</div>
+                    <div class="top-smenu-hline"></div>
+                </div>
+                <div class="cal-select">
+                    <div class="cal-toggles">
+                        <ul id="togglelist">
+                            <li id="today-click">	<i class="fa fa-calendar-o"></i> Today</li>
+                            <li id="next-seven-days">	<i class="fa fa-calendar"></i> Next 7 Days</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="main-view">
+                <div class="main-header">
+                    <div id="task-add">
+                        <div class="task-add-icon">	<i class="fa fa-plus"><p>Add Task</p></i>
 
+                        </div>
+                    </div>
+                    <div class="task-add-menu">
+                        <label for="cal-date">Task Date:</label>
+                        <input type="text" id="cal-date">
+                        <label for="task-name">Task:</label>
+                        <input type="text" id="task-name">
+                        <button id="task-submit-button">Submit</button>
+                    </div>
+                </div>
+                <div class="main-header-hline"></div>
+                <div class="redraw-main">
+                    <div id="seven-days" class="seven-days">
+                        <div class="days">
+                            <div id="day-container1" class="day">
+                                <h1 id="day-date1"></h1>
+                                <ul id="day1"></ul>
+                            </div>
+                            <div id="day-container2" class="day">
+                                <h1 id="day-date2"></h1>
+                                <ul id="day2"></ul>
+                            </div>
+                            <div id="day-container3" class="day">
+                                <h1 id="day-date3"></h1>
+                                <ul id="day3"></ul>
+                            </div>
+                            <div id="day-container4" class="day">
+                                <h1 id="day-date4"></h1>
+                                <ul id="day4"></ul>
+                            </div>
+                            <div id="day-container5" class="day">
+                                <h1 id="day-date5"></h1>
+                                <ul id="day5"></ul>
+                            </div>
+                            <div id="day-container6" class="day">
+                                <h1 id="day-date6"></h1>
+                                <ul id="day6"></ul>
+                            </div>
+                            <div id="day-container7" class="day">
+                                <h1 id="day-date7"></h1>
+                                <ul id="day7"></ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="today" class="today">
+                        	<h1 id="today-header">Tasks today:</h1>
 
+                        <ul id="today-task-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/jquery-1.8.3.js"></script>
+        <script src="js/jquery-ui-1.9.2.custom.js"></script>
+        <script src="js/main.js"></script>
+    </body>
 
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-</body>
 </html>

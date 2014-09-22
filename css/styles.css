@@ -1,0 +1,111 @@
+* {
+	box-sizing: border-box;
+}
+
+.body {
+	background: #F2F2F2;
+	height: 1000px;
+	min-width: 1000px;
+}
+
+.s-menu {
+	width: 30%;
+	float: left;
+	height: 100%;
+}
+
+.main-view {
+	width: 60%;
+	height: 1000px;
+	float: right;
+	background: #FFF;
+}
+
+.top-smenu-logo {
+	font-size: 48px;
+	margin: 10px 20px;
+}
+
+.top-smenu-logo i {
+	cursor: pointer;
+}
+
+.top-smenu-hline {
+	height: 1px;
+	width: 80%;
+	margin: auto;
+	background: #747474;
+}
+
+.cal-select {
+	color: #747474;
+}
+
+.cal-toggles {
+	width: 100%;
+}
+
+#togglelist li{
+	cursor: pointer;
+	font-size: 30px;
+	margin: 20px;
+}
+
+.task-add-icon {
+
+	font-size: 30px;
+	width: 500px;
+	margin: 20px;
+	
+}
+
+.task-add-icon p{
+	display: inline-block;
+	margin: 0px 20px;
+	cursor: pointer;
+}
+
+.task-add-icon i {
+	cursor: pointer;
+}
+
+.main-header-hline {
+	height: 1px;
+	width: 90%;
+	margin: auto;
+	background: #747474;
+}
+
+
+.today {
+	width: 80%;
+	margin: 60px;
+}
+
+.today li {
+	list-style: initial;
+	margin: 10px;
+}
+
+.days {
+	width: 80%;
+	margin: 60px;
+}
+
+.days ul{
+	margin: 20px;
+}
+
+.days ul li {
+	list-style: initial;
+}
+
+.seven-days {
+	display: none;
+}
+
+.task-add-menu {
+	display: none;
+}
+
+
