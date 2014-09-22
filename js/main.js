@@ -3,7 +3,6 @@ $(document).ready(function () {
         //--------------
         //Main app stuffs
         //--------------
-
         var taskArr = [];
         var date = new window.Date();
         var todayDate = date.getDate();
@@ -107,17 +106,9 @@ $(document).ready(function () {
         if (taskArr.length > 1) {
             cleanUp();
         }
-
-
-        //-----------------------------
-        // parse stuffs
-        //-----------------------------
-
-
         //-----------------------------
         // jQuery stuffs
         //------------------------------
-
         var renderTodayDate = function () {
             $todayHeader.text('Tasks today (' + monthDate +' ' + todayDate + '): ');
         };
