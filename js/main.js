@@ -23,10 +23,18 @@ $(document).ready(function () {
             return arr;
         };
         var orderedTaskArr = createArray(8, 0);
+        var parseDate = function (str) {
+            var mdy = str.split('/')
+            return new Date(mdy[2], mdy[0]-1, mdy[1]);
+        }
+
+        var daydiff = function(first, second) {
+            return (second-first)/(1000*60*60*24);
+        }
         var taskSorter = function () {
             var sum;
             for (var i = 0; i < taskArr.length; i++) {
-                sum = Number(taskArr[i].date) - Number(todayDate);
+                sum = Math.round(taskArr[i].date);
                 switch (sum) {
                     case 0:
                         orderedTaskArr[0].push(taskArr[i]);
@@ -57,7 +65,7 @@ $(document).ready(function () {
         };
         var sortOne = function () {
             var sum;
-            sum = Number(taskArr[taskArr.length - 1].date) - Number(todayDate);
+            sum = Math.round(taskArr[taskArr.length - 1].date);
             switch (sum) {
                 case 0:
                     orderedTaskArr[0].push(taskArr[taskArr.length - 1]);
@@ -89,7 +97,7 @@ $(document).ready(function () {
             for (var i = 0; i < orderedTaskArr.length; i++) {
                 var innerArray = orderedTaskArr[i];
                 for (var x = 0; x < innerArray.length; x++) {
-                    if (innerArray[x].date - Number(todayDate) < 0) {
+                    if (innerArray[x].date > 8) {
                         innerArray.splice(x, 1);
                     }
 
@@ -185,14 +193,13 @@ $(document).ready(function () {
             var t;
             $taskAdd.show();
             $taskShow.hide();
-            t = $calDate.val().split("/");
-            t = t[1];
+            t = daydiff(date, parseDate($calDate.val()));
             taskArr.push({
                 task: $taskName.val(),
                 date: t
             });
             sortOne();
-            if (Number(t) - Number(todayDate) === 0) {
+            if (t === 0) {
                 renderNew();
             }
         });
